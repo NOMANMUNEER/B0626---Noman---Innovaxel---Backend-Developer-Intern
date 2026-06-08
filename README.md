@@ -21,17 +21,17 @@ A production-ready, highly reliable Node.js/Express API designed to handle real-
 ### 1. Create Event Workflow
 Handles incoming event generation, validating that numbers are correct, dates are strictly in the future, and names remain universally unique.
 
-![Flowchart showing event creation steps with validation for future dates, seat counts, and unique event names]("./Pic/Create Event Workflow.png")
+![Workflow diagram showing event creation steps that validate a future event date, total seat counts, and unique event name before saving; presented as connected process boxes in documentation](./Pic/Create Event Workflow.png)
 
 ### 2. User Registration Workflow (Race Condition Protection)
 The core architecture of the app. It prevents multi-user race conditions using single-operation database locks and rollbacks upon duplication.
 
-![Flowchart showing registration process with atomic seat decrement and duplicate prevention using compound unique indexes]("./Pic/User Registration.png")
+![Workflow diagram showing the registration process with atomic seat decrement and duplicate user prevention using compound unique indexes during concurrent signups](./Pic/User Registration.png)
 
 ### 3. Cancel Registration Workflow
-Handles accurate seat restoration atomically, moving the registration status to `'cancelled'`.
+Handles accurate seat restoration atomically, moving the registration status to cancelled.
 
-![Flowchart showing cancellation process with registration status set to cancelled and seat restoration via atomic update]("./Pic/Cancel Registration.png")
+![Workflow diagram showing cancellation process with registration status updated to cancelled and seat restoration via atomic database update](./Pic/Cancel Registration.png)
 
 ---
 
