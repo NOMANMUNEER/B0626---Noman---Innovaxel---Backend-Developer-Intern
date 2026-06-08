@@ -22,7 +22,7 @@ A Node.js/Express REST API for managing event registrations with full race condi
 ### 1. Create Event
 Validates that the event name is unique, the date is in the future, and seat count is a positive number — then saves to the database.
 
-![Create Event Workflow](./pic/Create%20Event%20Workflow.png)
+![Create Event Workflow](./Pic/Create%20Event%20Workflow.png)
 
 ---
 
@@ -69,7 +69,7 @@ Marks the registration as `cancelled` and atomically restores the seat back to t
 ### 1. Clone & Install
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/NOMANMUNEER/B0626---Noman---Innovaxel---Backend-Developer-Intern
 cd event-registration-api
 npm install
 ```
