@@ -39,14 +39,14 @@ Event.findOneAndUpdate(
 
 A **Compound Unique Index** `{ eventId, userName }` on the Registration schema blocks duplicate signups at the database level. If a seat was decremented but the registration insert fails (e.g. duplicate), the seat is immediately restored via rollback.
 
-![User Registration Workflow](./pic/User%20Registration.png)
+![User Registration Workflow](./Pic/User%20Registration.png)
 
 ---
 
 ### 3. Cancel Registration
 Marks the registration as `cancelled` and atomically restores the seat back to the event pool.
 
-![Cancel Registration Workflow](./pic/Cancel%20Registration.png)
+![Cancel Registration Workflow](./Pic/Cancel%20Registration.png)
 
 ---
 
